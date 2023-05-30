@@ -3,9 +3,35 @@
   margin: 0;
 }
 
+/* #F6F7F8 
+011627
+*/
+
 body {
   width: 100vw;
-  background-color: #23252c;
+  background: hsla(208, 7%, 55%, 1);
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6em;
+
+  background: linear-gradient(
+    90deg,
+    hsla(208, 7%, 55%, 1) 0%,
+    hsla(191, 5%, 40%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(208, 7%, 55%, 1) 0%,
+    hsla(191, 5%, 40%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(208, 7%, 55%, 1) 0%,
+    hsla(191, 5%, 40%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#858E96", endColorstr="#60696B", GradientType=1 );
 }
 
 #root {
@@ -15,17 +41,49 @@ body {
   padding-block: 44px;
 }
 
+ul {
+  list-style: none;
+}
+
 .card--container {
-  width: 40vw;
+  width: 45vw;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: #fff;
   border: 1px solid #d1d5db;
-  border-radius: 10px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  background-color: #1a1b21;
+  filter: drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
+  /* background-color: #1a1b21; */
+  background: hsla(205, 46%, 10%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(205, 46%, 10%, 1) 0%,
+    hsla(191, 28%, 23%, 1) 50%,
+    hsla(207, 41%, 27%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(205, 46%, 10%, 1) 0%,
+    hsla(191, 28%, 23%, 1) 50%,
+    hsla(207, 41%, 27%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(205, 46%, 10%, 1) 0%,
+    hsla(191, 28%, 23%, 1) 50%,
+    hsla(207, 41%, 27%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0E1C26", endColorstr="#2A454B", GradientType=1 );
+  border-radius: 0.7rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border: 1px solid rgba(26, 27, 33, 0.21);
 }
 
 .info {
@@ -34,12 +92,13 @@ body {
 
 .profile--container {
   width: 100%;
-  height: 375px;
-  background-image: url("./assets/profile.jpeg");
+  height: 35vh;
+  background-image: url("./assets/profile.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   border-radius: 10px 10px 0px 0px;
+  box-shadow: 0 .2rem 1.2rem  rgba(235, 235, 236, 0.1);
   /* object-fit: contain; */
 }
 
@@ -48,50 +107,39 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding-block: 20px;
+  padding-block: 1.25rem;
   justify-content: space-between;
-  line-height: 30px;
-}
-
-.info--text h1 {
-  font-family: "Inter";
-  text-align: center;
-  color: #ffffff;
+  line-height: 1.875rem;
 }
 
 .info--text h3 {
-  color: #f3bf99;
-  font-family: "Inter";
+  color: #f7d486;
   font-weight: 400;
-  font-size: 12.8px;
+  font-size: 0.8rem;
 }
 
 .info--text p {
-  font-family: "Inter";
   font-weight: 400;
-  font-size: 10.24px;
-  line-height: 150%;
-
-  color: #f5f5f5;
+  font-size: 0.64rem;
+  line-height: 1.3rem;
 }
 
 .btn--container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 8px;
 }
 
 .btn--container button {
   background-color: #ffffff;
   border: 1px solid #d1d5db;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
-  border-radius: 6px;
-  width: 30%;
-  height: 40px;
-  padding: 0.5em 3.1em;
+  border-radius: 0.4rem;
+  width: 10rem;
+  height: 2.5rem;
+  padding: 0.5em 2.1em;
   font-size: 0.9rem;
-  line-height: 16px;
+  line-height: 1rem;
   text-align: center;
   font-family: "Inter";
   padding: 9px 13px 9px 11px;
@@ -99,53 +147,67 @@ body {
 }
 
 .btn--container .linkedin-btn {
-  background-color: #5093e2;
+  background-color: #3268a4;
 }
 
 .btn--container .linkedin-btn {
   color: #ffffff;
 }
 
-.about--container {
-  padding: 40px;
-  font-family: "Inter";
+.card--content {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 2.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  gap: 2rem;
 }
+
+/* .about--container {
+} */
 
 .about--container .about--title {
-  font-weight: 700;
-  font-size: 19px;
-  color: #f5f5f5;
-  margin-bottom: 10px;
+  margin-bottom: 0.8rem;
 }
 
-.about--container p {
-  font-size: 14px;
+.card--content p {
+  font-size: 0.8rem;
   font-weight: 400;
   line-height: 150%;
-}
-
-.interests--container {
-  padding: 0 40px 40px 40px;
-  font-family: "Inter";
 }
 
 .interests--container .interests--title {
-  font-weight: 700;
-  font-size: 19px;
-  color: #f5f5f5;
-  margin-bottom: 10px;
+  margin-bottom: 0.8rem;
 }
 
-.interests--container .description {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 150%;
+.skills-buttons {
+  display: flex;
+  flex-direction: row;
+  cursor: default;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  padding: 0;
+}
+
+.skills-buttons > li {
+  margin: 0.2em 0.5em 0.2em 0.5em;
+  padding: 0.1em 0.8em 0.1em 0.8em;
+  text-align: center;
+  border: solid 0.1em;
+  border-radius: 2em;
+  font-size: 0.7rem;
+}
+
+.skills-buttons > li:hover {
+  color: #87a3a3;
+  border-color: #87a3a3;
 }
 
 .footer--container {
   width: 100%;
   height: 64px;
-  background-color: #161619;
+  background-color: rgb(17, 30, 37);
   border-radius: 0px 0px 10px 10px;
   display: flex;
   justify-content: space-evenly;
@@ -155,4 +217,53 @@ body {
 
 .footer--container i {
   color: #918e9b;
+}
+
+.footer--container i:hover {
+  color: #d2caca;
+}
+
+/* 
+responsive */
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .card--container {
+    width: 65vw;
+  }
+
+  .info--text h1 {
+    font-size: 1em;
+  }
+
+  .info--text h3 {
+    font-size: 0.7rem;
+  }
+
+  .btn--container button {
+    width: 6rem;
+    height: 3.5rem;
+  }
+
+  .card--content {
+    font-size: 0.8rem;
+  }
+  .card--content p {
+    font-size: 0.6rem;
+  }
+
+  .profile--container {
+    height: 25vh;
+  }
+
+  .skills-buttons > li {
+    font-size: .5rem;
+  }
+}
+
+
+@media only screen and (max-width: 390px) {
+  .card--container {
+    width: 75vw;
+  }
 }
