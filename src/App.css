@@ -287,8 +287,8 @@ responsive */
   }
 }
 
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 500px) {
   .card--container {
-    width: 95vw;
+    width: 90vw;
   }
 }
