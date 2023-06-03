@@ -98,7 +98,7 @@ ul {
   background-size: contain;
   background-position: center;
   border-radius: 10px 10px 0px 0px;
-  box-shadow: 0 .2rem 1.2rem  rgba(235, 235, 236, 0.1);
+  box-shadow: 0 0.2rem 1.2rem rgba(235, 235, 236, 0.1);
   /* object-fit: contain; */
 }
 
@@ -204,6 +204,32 @@ ul {
   border-color: #87a3a3;
 }
 
+.slide {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+.slide > img {
+  margin-right: 1rem;
+  transition: ease-in-out 0.3s;
+  height: 7rem;
+}
+
+.slide > img:hover {
+  border-radius: 20%;
+  box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.04),
+    0px 2px 6px rgba(255, 255, 255, 0.08), 0px 8px 8px rgba(255, 255, 255, 0.1),
+    0px 9px 9px rgba(255, 255, 255, 0.14);
+}
+
+.slide > img:hover:before {
+  opacity: 0.18;
+  filter: blur(10px) saturate(100%);
+  transform: scale(2.8) translate3d(-18%, 0px, 0px);
+}
+
 .footer--container {
   width: 100%;
   height: 64px;
@@ -257,13 +283,12 @@ responsive */
   }
 
   .skills-buttons > li {
-    font-size: .5rem;
+    font-size: 0.5rem;
   }
 }
 
-
 @media only screen and (max-width: 390px) {
   .card--container {
-    width: 75vw;
+    width: 90vw;
   }
 }
